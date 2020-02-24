@@ -16,6 +16,6 @@
     <br/>
     <a href="helloController/requestMapping?name=test">RequestMapping</a>
     <br/>
-    <a href="helloController/paramsTest?name=pankx&age=18">请求参数绑定（即获取请求参数的值）</a>
+    <a href="params/testParams?name=pankx&age=18">请求参数绑定（即获取请求参数的值）</a>
 </body>
 </html>

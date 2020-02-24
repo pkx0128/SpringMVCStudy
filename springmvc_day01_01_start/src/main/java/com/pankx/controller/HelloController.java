@@ -36,18 +36,4 @@ public class HelloController {
         return "success";
     }
 
-    /**
-     * 请求参数绑定
-     * 需要请参数的名称与方法paramsTest参数名一样Springmvc就会自动把请求参数的值传到方法内
-     * @param name
-     * @param age
-     * @return
-     */
-    @RequestMapping(path = "/paramsTest")
-    public String paramsTest(String name,int age){
-        System.out.println("请求参数绑定Start。。。。");
-        System.out.println("请求传递的参数与值为："+"name:"+name+",age:"+age);
-
-        return "success";
-    }
 }
