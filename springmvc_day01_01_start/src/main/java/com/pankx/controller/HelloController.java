@@ -27,12 +27,27 @@ public class HelloController {
      * 属性：
      *      path:设置请求的url地址，与value属性作用相同
      *      method:设置请求的方式，如：method={RequestMethod.GET}
-     *      params:设置请求的参数，请求传递的参数名必须与此参数设置的内容相同如parames = {"name"}则请求传递的参数名必须包涵一个参数名为name的参数
+     *      params:设置请求的参数，请求传递的参数名和参数值必须与此参数设置的内容相同如parames = {"name"}则请求传递的参数名必须包涵一个参数名为name的参数
      * @return
      */
     @RequestMapping(path = "/requestMapping",method = {RequestMethod.GET},params = {"name"})
     public String requestMapping(){
         System.out.println("测试注解@RequestMapping的使用。。。");
+        return "success";
+    }
+
+    /**
+     * 请求参数绑定
+     * 需要请参数的名称与方法paramsTest参数名一样Springmvc就会自动把请求参数的值传到方法内
+     * @param name
+     * @param age
+     * @return
+     */
+    @RequestMapping(path = "/paramsTest")
+    public String paramsTest(String name,int age){
+        System.out.println("请求参数绑定Start。。。。");
+        System.out.println("请求传递的参数与值为："+"name:"+name+",age:"+age);
+
         return "success";
     }
 }

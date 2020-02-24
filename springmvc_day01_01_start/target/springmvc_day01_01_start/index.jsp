@@ -9,11 +9,13 @@
 <html>
 <head>
     <title>Title</title>
-    <h3>入门程序</h3>
-    <a href="hello">入门程序</a>
-    <a href="helloController/requestMapping?name=test">RequestMapping</a>
 </head>
 <body>
-
+<h3>入门程序</h3>
+    <a href="helloController/hello">入门程序</a>
+    <br/>
+    <a href="helloController/requestMapping?name=test">RequestMapping</a>
+    <br/>
+    <a href="helloController/paramsTest?name=pankx&age=18">请求参数绑定（即获取请求参数的值）</a>
 </body>
 </html>
