@@ -10,6 +10,8 @@ public class Person implements Serializable {
     private String sex;
     private int age;
 
+    private User user;
+
     public String getName() {
         return name;
     }
@@ -34,12 +36,21 @@ public class Person implements Serializable {
         this.age = age;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", sex='" + sex + '\'' +
                 ", age=" + age +
+                ", user=" + user +
                 '}';
     }
 }

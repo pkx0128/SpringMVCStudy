@@ -15,6 +15,8 @@
         姓名：<input type="text" name="name"/><br/>
         年龄：<input type="text" name="age"/><br/>
         性别：<input type="text" name="sex"/><br/>
+        用户名：<input type="text" name="user.uname"/><br/>
+        密码：<input type="text" name="user.upassword"/><br/>
         <input type="submit" value="提交"/>
 
     </form>

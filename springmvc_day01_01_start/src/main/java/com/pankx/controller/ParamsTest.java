@@ -26,7 +26,7 @@ public class ParamsTest {
     }
 
     /**
-     * 请求参数为实体类（如：javaBean等）的绑定实例
+     * 请求参数封装到实体类（如：javaBean等）的绑定实例
      * 提交表单中的输入框的name的值需要与javaBean中的成员变量名相同
      * @param person
      * @return
