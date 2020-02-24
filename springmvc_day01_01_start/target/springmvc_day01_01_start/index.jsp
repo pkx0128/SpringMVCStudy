@@ -11,6 +11,7 @@
     <title>Title</title>
     <h3>入门程序</h3>
     <a href="hello">入门程序</a>
+    <a href="helloController/requestMapping">RequestMapping</a>
 </head>
 <body>
 
