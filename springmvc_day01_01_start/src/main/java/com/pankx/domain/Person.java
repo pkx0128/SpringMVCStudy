@@ -1,6 +1,8 @@
 package com.pankx.domain;
 
 import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 定义javaBean Person
@@ -10,7 +12,9 @@ public class Person implements Serializable {
     private String sex;
     private int age;
 
-    private User user;
+//    private User user;
+    private List<User> list;
+    private Map<String,User> map;
 
     public String getName() {
         return name;
@@ -36,12 +40,29 @@ public class Person implements Serializable {
         this.age = age;
     }
 
-    public User getUser() {
-        return user;
+//    public User getUser() {
+////        return user;
+////    }
+////
+////    public void setUser(User user) {
+////        this.user = user;
+////    }
+
+
+    public List<User> getList() {
+        return list;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setList(List<User> list) {
+        this.list = list;
+    }
+
+    public Map<String, User> getMap() {
+        return map;
+    }
+
+    public void setMap(Map<String, User> map) {
+        this.map = map;
     }
 
     @Override
@@ -50,7 +71,8 @@ public class Person implements Serializable {
                 "name='" + name + '\'' +
                 ", sex='" + sex + '\'' +
                 ", age=" + age +
-                ", user=" + user +
+                ", list=" + list +
+                ", map=" + map +
                 '}';
     }
 }
