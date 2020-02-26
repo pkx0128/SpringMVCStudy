@@ -19,7 +19,16 @@
         <property name="suffix" value=".jsp"></property>
     </bean>
 
+<!--    配置自定义类型转换器-->
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="com.pankx.utils.StringToDate"/>
+            </set>
+        </property>
+    </bean>
+
 <!--    开启springmvc框架注解的支持-->
-    <mvc:annotation-driven></mvc:annotation-driven>
+    <mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>
 
 </beans>

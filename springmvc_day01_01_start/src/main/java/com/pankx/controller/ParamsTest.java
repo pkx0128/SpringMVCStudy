@@ -40,4 +40,16 @@ public class ParamsTest {
         System.out.println(person);
         return "success";
     }
+
+    /**
+     * 自定义类型转换器
+     * @param person
+     * @return
+     */
+    @RequestMapping(path = "/defType")
+    public String defType(Person person){
+        System.out.println("defType执行。。。。。");
+        System.out.println(person);
+        return "success";
+    }
 }

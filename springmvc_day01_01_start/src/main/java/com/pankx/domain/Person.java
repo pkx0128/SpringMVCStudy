@@ -1,6 +1,7 @@
 package com.pankx.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -11,10 +12,11 @@ public class Person implements Serializable {
     private String name;
     private String sex;
     private int age;
+    private Date birthday;
 
 //    private User user;
-    private List<User> list;
-    private Map<String,User> map;
+//    private List<User> list;
+//    private Map<String,User> map;
 
     public String getName() {
         return name;
@@ -49,20 +51,29 @@ public class Person implements Serializable {
 ////    }
 
 
-    public List<User> getList() {
-        return list;
+//    public List<User> getList() {
+//        return list;
+//    }
+//
+//    public void setList(List<User> list) {
+//        this.list = list;
+//    }
+//
+//    public Map<String, User> getMap() {
+//        return map;
+//    }
+//
+//    public void setMap(Map<String, User> map) {
+//        this.map = map;
+//    }
+
+
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setList(List<User> list) {
-        this.list = list;
-    }
-
-    public Map<String, User> getMap() {
-        return map;
-    }
-
-    public void setMap(Map<String, User> map) {
-        this.map = map;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     @Override
@@ -71,8 +82,7 @@ public class Person implements Serializable {
                 "name='" + name + '\'' +
                 ", sex='" + sex + '\'' +
                 ", age=" + age +
-                ", list=" + list +
-                ", map=" + map +
+                ", birthday=" + birthday +
                 '}';
     }
 }
