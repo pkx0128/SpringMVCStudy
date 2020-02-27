@@ -15,7 +15,7 @@ public class CookieValueTest {
      *      作用：用于把指定Cookie名称的值传入控制器方法的参数中
      *      属性：
      *          value:用于指定Cookie的名称
-     *          required:
+     *          required:用于设置是否有此cookie
      * @return
      */
     @RequestMapping("/cookieValueTest")
