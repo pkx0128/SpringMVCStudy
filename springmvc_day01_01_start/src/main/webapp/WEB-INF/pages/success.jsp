@@ -14,6 +14,8 @@
 
 <h1>Success!!</h1>
 <%--获取request请求域的内容--%>
-<h2>${requestScope}</h2>
+<h2>${requestScope.get("userSession")}</h2>
+<h2>${sessionScope}</h2>
+
 </body>
 </html>

@@ -12,5 +12,9 @@
 </head>
 <body>
     <a href="Session/testSessionAttribute">注解@SessionAttribute实例</a>
+    <hr/>
+    <a href="Session/testGetSessionAtrribute">测试testGetSessionAtrribute</a>
+    <hr/>
+    <a href="Session/testDelSessionAtrribute">测试testDelSessionAtrribute</a>
 </body>
 </html>
