@@ -39,8 +39,10 @@ public class UserController {
     @RequestMapping("/testVoid")
     public void testVoid(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("testVoid执行了。。。。");
-////        1.使用HttpServletRequest对象的请求转发
-        request.getRequestDispatcher("/WEB-INF/pages/success.jsp").forward(request,response);
+//       1.使用HttpServletRequest对象的请求转发
+//        request.getRequestDispatcher("/WEB-INF/pages/success.jsp").forward(request,response);
+//         2.使用HttpServletResponse对象的重定向
+        response.sendRedirect(request.getContextPath()+"/index.jsp");
         return;
     }
 }
