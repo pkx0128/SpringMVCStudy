@@ -5,7 +5,7 @@
   Time: 6:00 下午
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
     <title>success</title>
@@ -13,5 +13,6 @@
 <body>
 
 <h1>Success!!</h1>
+<h2>${requestScope}</h2>
 </body>
 </html>
