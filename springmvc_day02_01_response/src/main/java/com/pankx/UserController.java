@@ -42,7 +42,12 @@ public class UserController {
 //       1.使用HttpServletRequest对象的请求转发
 //        request.getRequestDispatcher("/WEB-INF/pages/success.jsp").forward(request,response);
 //         2.使用HttpServletResponse对象的重定向
-        response.sendRedirect(request.getContextPath()+"/index.jsp");
+//        response.sendRedirect(request.getContextPath()+"/index.jsp");
+//        3.对请求直接响应
+//        处理中响应中文乱码问题
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=utf-8");
+        response.getWriter().println("你好");
         return;
     }
 }
