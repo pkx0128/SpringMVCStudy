@@ -73,4 +73,17 @@ public class UserController {
         return modelAndView;
     }
 
+    /**
+     *
+     * @return
+     */
+    @RequestMapping("/testForwardAndRedirect")
+    public String testForwardAndRedirect(){
+        System.out.println("testForwardAndRedirect执行了。。。。");
+
+//        使用关键字forward请求转发
+        return "forward:/WEB-INF/pages/success.jsp";
+
+    }
+
 }
