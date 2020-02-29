@@ -17,6 +17,8 @@
                 <property name="prefix" value="/WEB-INF/pages/"/>
                 <property name="suffix" value=".jsp"/>
         </bean>
+<!--        配置静态资源不被前端控制器过滤-->
+        <mvc:resources mapping="/js/**" location="/js/"/>
 <!--开启mvc注解支持-->
         <mvc:annotation-driven/>
 </beans>
