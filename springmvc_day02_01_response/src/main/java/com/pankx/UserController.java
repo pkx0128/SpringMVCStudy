@@ -82,8 +82,9 @@ public class UserController {
         System.out.println("testForwardAndRedirect执行了。。。。");
 
 //        使用关键字forward请求转发
-        return "forward:/WEB-INF/pages/success.jsp";
-
+//        return "forward:/WEB-INF/pages/success.jsp";
+//        使用关键字redirect重定向
+        return "redirect:/index.jsp";
     }
 
 }
