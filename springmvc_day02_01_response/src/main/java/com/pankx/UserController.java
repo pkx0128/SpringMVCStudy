@@ -4,6 +4,7 @@ import com.pankx.domain.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -50,4 +51,26 @@ public class UserController {
         response.getWriter().println("你好");
         return;
     }
+
+    /**
+     * 返回值为ModelAndView
+     * @return
+     */
+    @RequestMapping("/testModelAndView")
+    public ModelAndView testModelAndView(){
+        System.out.println("testModelAndView执行了。。。");
+//        模拟从数据库查询到值
+        Person person = new Person();
+        person.setName("modelandview");
+        person.setAge(11);
+
+//        创建ModelAndView对象
+        ModelAndView modelAndView = new ModelAndView();
+//        把person存到request域对象中
+        modelAndView.addObject(person);
+//        设置跳转的页面
+        modelAndView.setViewName("success");
+        return modelAndView;
+    }
+
 }
