@@ -21,7 +21,9 @@
                     data:'{"name":"pantest","age":18}',
                     dataType:"json",
                     success: function(data){
-
+                        alert(data);
+                        alert(data.name);
+                        alert(data.age);
                     }
                 });
             });
