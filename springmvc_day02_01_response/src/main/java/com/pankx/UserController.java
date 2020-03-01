@@ -3,13 +3,17 @@ package com.pankx;
 import com.pankx.domain.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 
 @Controller
 @RequestMapping("/user")
@@ -74,7 +78,7 @@ public class UserController {
     }
 
     /**
-     *
+     *使用关键字forward和Redirect跳转页面
      * @return
      */
     @RequestMapping("/testForwardAndRedirect")
@@ -85,6 +89,21 @@ public class UserController {
 //        return "forward:/WEB-INF/pages/success.jsp";
 //        使用关键字redirect重定向
         return "redirect:/index.jsp";
+    }
+
+    /**
+     *响应客户端发过来的Json类型数据的异步请求
+     * @param person
+     */
+    @RequestMapping("/testJson")
+    public @ResponseBody Person testJson(@RequestBody Person person){
+        System.out.println("testJson执行了。。。。。");
+        System.out.println(person);
+        //模拟数据库查询
+        Person person1 = new Person();
+        person1.setName("pankx");
+        person1.setAge(22);
+        return person1;
     }
 
 }

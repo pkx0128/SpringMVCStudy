@@ -13,7 +13,17 @@
     <script>
         $(function(){
             $("#btn").click(function(){
-                alert("ajax btn");
+                //发送ajax请求
+                $.ajax({
+                    type:"post",
+                    url:"user/testJson",
+                    contentType:"application/json;charset=UTF-8",
+                    data:'{"name":"pantest","age":18}',
+                    dataType:"json",
+                    success: function(data){
+
+                    }
+                });
             });
         });
     </script>
