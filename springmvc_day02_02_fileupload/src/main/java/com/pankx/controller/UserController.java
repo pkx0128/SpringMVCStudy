@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/user")
@@ -45,6 +46,10 @@ public class UserController {
 //                为上传文件项
 //                获取文件名称
                 String filename = item.getName();
+//                设置图片名称为唯一值，UUID
+                String uuid = UUID.randomUUID().toString().replace("-","");
+//                拼接文件名
+                filename = uuid+"_"+filename;
 //                写入文件
                 item.write(new File(path,filename));
 //                删除缓存文件
