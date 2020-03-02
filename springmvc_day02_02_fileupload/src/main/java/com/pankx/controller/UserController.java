@@ -1,5 +1,7 @@
 package com.pankx.controller;
 
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.WebResource;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -19,7 +21,7 @@ import java.util.UUID;
 public class UserController {
 
     /**
-     * 文件上传
+     * 传统文件上传
      * @return
      */
     @RequestMapping("/fileupload1")
@@ -75,6 +77,27 @@ public class UserController {
         String fileName = upload.getOriginalFilename();
 //        完成文件上传
         upload.transferTo(new File(path,fileName));
+        return "success";
+    }
+
+    /**
+     * 跨服务上传文件,要把Tomcat服务器的只读属性设置为false,否则会报405 Method Not Allowed错误
+     * @param upload
+     * @return
+     * @throws IOException
+     */
+    @RequestMapping("/fileupload3")
+    public String fileupload3(MultipartFile upload) throws IOException {
+
+        String path = "http://localhost:8090/uploads/";
+//        获取文件的名称
+        String filename = upload.getOriginalFilename();
+//        创建客户端对象
+        Client client = Client.create();
+//        连接文件服务器
+       WebResource resource = client.resource(path+filename);
+//       上传文件到文件服务器
+        resource.put(upload.getBytes());
         return "success";
     }
 }
