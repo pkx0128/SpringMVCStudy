@@ -11,6 +11,10 @@
     <title>上传文件实例</title>
 </head>
 <body>
-    <a href="user/fileupdate">上传文件实例</a>
+<%--    <a href="user/fileupload1">上传文件实例</a>--%>
+       <form action="user/fileupload1" method="post" enctype="multipart/form-data">
+            选择文件：<input type="file" name="upload"/><br/>
+                    <input type="submit" value="上传"/>
+        </form>
 </body>
 </html>

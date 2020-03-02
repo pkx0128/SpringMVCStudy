@@ -24,5 +24,18 @@
         <mvc:resources mapping="/images/**" location="/images/"/>
 
 <!--开启mvc注解支持-->
-        <mvc:annotation-driven/>
+        <mvc:annotation-driven>
+<!--                &lt;!&ndash; 指定http返回编码格式，不然返回ajax请求json会出现中文乱码 &ndash;&gt;-->
+<!--                        <mvc:message-converters>-->
+<!--                            <bean class="org.springframework.http.converter.StringHttpMessageConverter">-->
+<!--                                 <property name="supportedMediaTypes">-->
+<!--                                     <list>-->
+<!--                                         <value>text/html;charset=UTF-8</value>-->
+<!--                                         <value>application/json;charset=UTF-8</value>-->
+<!--                                         <value>*/*;charset=UTF-8</value>-->
+<!--                                     </list>-->
+<!--                                 </property>-->
+<!--                             </bean>-->
+<!--                         </mvc:message-converters>-->
+        </mvc:annotation-driven>
 </beans>
