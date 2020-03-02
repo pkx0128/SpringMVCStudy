@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springmvc_day01_01_start" />
         <module name="springmvc_day02_01_response" />
+        <module name="springmvc_day02_02_fileupload" />
       </profile>
     </annotationProcessing>
   </component>
