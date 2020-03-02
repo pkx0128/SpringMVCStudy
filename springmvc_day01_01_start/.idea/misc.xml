@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../fileupload" />
     <file type="web" url="file://$PROJECT_DIR$" />
     <file type="web" url="file://$PROJECT_DIR$/../springmvc_day02_01_response" />
     <file type="web" url="file://$PROJECT_DIR$/../springmvc_day02_02_fileupload" />
@@ -12,6 +13,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../springmvc_day02_01_response/pom.xml" />
         <option value="$PROJECT_DIR$/../springmvc_day02_02_fileupload/pom.xml" />
+        <option value="$PROJECT_DIR$/../fileupload/pom.xml" />
       </list>
     </option>
   </component>
