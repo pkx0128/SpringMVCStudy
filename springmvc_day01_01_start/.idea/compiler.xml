@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springmvc_day01_01_start" />
-        <module name="fileupload" />
-        <module name="springmvc_day02_02_fileupload" />
         <module name="springmvc_day02_01_response" />
         <module name="springmvc_day02_03_exception" />
+        <module name="fileupload" />
+        <module name="springmvc_day02_02_fileupload" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
