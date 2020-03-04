@@ -6,11 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="fileupload" />
         <module name="springmvc_day01_01_start" />
-        <module name="springmvc_day02_01_response" />
+        <module name="fileupload" />
         <module name="springmvc_day02_02_fileupload" />
+        <module name="springmvc_day02_01_response" />
+        <module name="springmvc_day02_03_exception" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SpringMVCUpload" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
