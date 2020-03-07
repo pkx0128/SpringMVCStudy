@@ -6,12 +6,13 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class MyInterceptor1 implements HandlerInterceptor {
+/**
+ * 拦截器类2
+ */
+public class MyInterceptor2 implements  HandlerInterceptor{
+
     /**
-     *预处理，controller方法执行前执行
-     * return true放行，执行下一个拦截器，如果没有拦截器，执行controller中的方法
-     * return false,不放行
-     *
+     * controller控制器方法执行之前执行
      * @param request
      * @param response
      * @param handler
@@ -20,13 +21,12 @@ public class MyInterceptor1 implements HandlerInterceptor {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("MyInterceptor1拦截器执行了。。。。前1");
-//        request.getRequestDispatcher("/WEB-INF/pages/error.jsp").forward(request,response);
+        System.out.println("MyInterceptor2的preHandle方法执行了。。。。前2");
         return true;
     }
 
     /**
-     * 后处理方法,controller方法执行之后执行
+     * controller控制器方法执行之后执行
      * @param request
      * @param response
      * @param handler
@@ -35,19 +35,11 @@ public class MyInterceptor1 implements HandlerInterceptor {
      */
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        System.out.println("MyInterceptor1拦截器执行了。。。。后1");
+        System.out.println("MyInterceptor2的postHandle方法执行了。。。。后2");
     }
 
-    /**
-     * controller执行完，最后执行的方法
-     * @param request
-     * @param response
-     * @param handler
-     * @param ex
-     * @throws Exception
-     */
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        System.out.println("MyInterceptor1拦截器执行了。。。。最后1");
+        System.out.println("MyInterceptor2的aftercompletion方法执行了。。。最后2");
     }
 }

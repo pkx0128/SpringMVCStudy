@@ -29,6 +29,13 @@
 <!--                配置拦截器对象-->
                <bean class="com.pankx.interceptor.MyInterceptor1"/>
             </mvc:interceptor>
+<!--            配置拦截器2-->
+            <mvc:interceptor>
+<!--                配置要拦截的方法-->
+                <mvc:mapping path="/**"/>
+<!--                配置拦截器对象-->
+                <bean class="com.pankx.interceptor.MyInterceptor2"/>
+            </mvc:interceptor>
         </mvc:interceptors>
 <!--    开启mvc注解支持-->
         <mvc:annotation-driven/>

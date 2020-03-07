@@ -12,5 +12,6 @@
 </head>
 <body>
 <h1>Success</h1>
+<% System.out.println("Success页面执行了。。。。");%>
 </body>
 </html>

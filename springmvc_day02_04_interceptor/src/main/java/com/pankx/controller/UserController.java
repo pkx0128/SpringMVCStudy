@@ -9,7 +9,7 @@ public class UserController {
 
     @RequestMapping("/testInterceptor")
     public String testInterceptor(){
-        System.out.println("testInterceptor执行了。。。");
+        System.out.println("控制器方法testInterceptor执行了。。。");
         return "success";
     }
 }
