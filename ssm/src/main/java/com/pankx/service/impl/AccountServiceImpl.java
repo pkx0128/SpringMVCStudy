@@ -13,7 +13,7 @@ import java.util.List;
 public class AccountServiceImpl implements AccountService {
     @Override
     public List<Account> findAll() {
-        System.out.println("业务层查询执行了。。。");
+        System.out.println("业务层查询所有方法执行了。。。");
         return null;
     }
 
