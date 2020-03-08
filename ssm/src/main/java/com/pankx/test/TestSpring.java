@@ -7,17 +7,13 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestSpring {
-
-//    public static void main(String[] args){
-//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-//        AccountService accountService = applicationContext.getBean("accountService",AccountService.class);
-//        accountService.findAll();
-//
-//    }
     @Test
     public void run1(){
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext("com.pankx");
+        //加载配置文件
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
+        //获取对象
         AccountService accountService = applicationContext.getBean("accountService",AccountService.class);
+        //执行对象方法
         accountService.findAll();
     }
 
