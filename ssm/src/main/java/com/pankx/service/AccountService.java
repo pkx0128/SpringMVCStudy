@@ -11,5 +11,5 @@ public interface AccountService {
     //查询所有
     public List<Account> findAll();
     //保存账号
-    public void saveAccount();
+    public void saveAccount(Account account);
 }

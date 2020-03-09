@@ -18,7 +18,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public void saveAccount() {
+    public void saveAccount(Account account) {
         System.out.println("业务层保存方法执行了。。。。。");
     }
 }

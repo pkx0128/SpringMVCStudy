@@ -18,5 +18,5 @@ public interface AccountDAO {
     public List<Account> findAll();
     //保存账号信息
     @Insert("INSERT INTO account (name,money) VALUES(#{name},#{money})")
-    public void saveAccount();
+    public void saveAccount(Account account);
 }
