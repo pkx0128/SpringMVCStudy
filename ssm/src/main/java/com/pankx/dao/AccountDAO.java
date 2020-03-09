@@ -4,6 +4,7 @@ package com.pankx.dao;
 import com.pankx.domain.Account;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * 账号Dao
  * mybatis可以只写接，不用写接实现类
  */
+@Repository
 public interface AccountDAO {
 
     //查询所有

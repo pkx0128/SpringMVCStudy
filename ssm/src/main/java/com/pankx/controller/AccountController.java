@@ -1,9 +1,11 @@
 package com.pankx.controller;
 
 
+import com.pankx.domain.Account;
 import com.pankx.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -28,9 +30,11 @@ public class AccountController {
     }
 
     @RequestMapping("/testfindAll")
-    public String findAll(){
+    public String findAll(Model list){
         System.out.println("表现层的查询所有用户的方法。。。。。");
-        accountService.findAll();
+        List<Account> lists = accountService.findAll();
+        list.addAttribute("list",lists);
+
         return "list";
     }
 }
