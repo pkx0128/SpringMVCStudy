@@ -2,6 +2,8 @@ package com.pankx.dao;
 
 
 import com.pankx.domain.Account;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -12,7 +14,9 @@ import java.util.List;
 public interface AccountDAO {
 
     //查询所有
+    @Select("SELECT * FROM account")
     public List<Account> findAll();
     //保存账号信息
+    @Insert("INSERT INTO account (name,money) VALUES(#{name},#{money})")
     public void saveAccount();
 }
